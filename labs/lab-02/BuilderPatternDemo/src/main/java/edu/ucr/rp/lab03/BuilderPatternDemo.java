@@ -12,7 +12,6 @@ import edu.ucr.rp.lab03.ui.PasswordGeneratorForm;
  */
 public class BuilderPatternDemo {
     public static void main(String[] args) {
-
         PasswordGeneratorForm form = new PasswordGeneratorForm();
         form.display();
     }

@@ -2,6 +2,7 @@ package edu.ucr.rp.lab03.ui;
 
 import edu.ucr.rp.lab03.generator.PasswordGeneratorBuilder;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -52,11 +53,9 @@ public class PasswordGeneratorForm extends Application {
         builder.withSpecialChars(specialCharsTextField.getText().toCharArray());
         builder.withMinLength(Integer.parseInt(minLengthTextField.getText()));
 
-        while(true){
-            
-        }
-       /* showAlert(Alert.AlertType.INFORMATION, stage, "Password Generado",
-                "El password generado es:" + builder.build().generate());*/
+        //Platform.runLater();
+       showAlert(Alert.AlertType.INFORMATION, stage, "Password Generado",
+                "El password generado es:" + builder.build().generate());
     }
 
     private Scene createScene(Pane pane) {
